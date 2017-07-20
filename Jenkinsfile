@@ -29,7 +29,10 @@ pipeline {
 
     stage('deploy: prod') {
       steps {
-        sh "npm publish --registry//registry.npmjs.org/:_authToken=$NPM_TOKEN"
+        sh '''
+          export NPM_TOKEN="${NPM_TOKEN}"
+          npm publish
+           '''
       }
     }
   }
