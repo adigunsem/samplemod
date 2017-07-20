@@ -1,6 +1,6 @@
 {
   "name": "samplemodsem",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "example for npm workflow jenkins integration",
   "main": "index.js",
   "scripts": {
