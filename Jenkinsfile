@@ -28,9 +28,6 @@ pipeline {
     }
 
     stage('deploy: prod') {
-      when {
-        branch 'master'
-      }
       steps {
         sh "npm publish"
       }
