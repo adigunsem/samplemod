@@ -3,13 +3,21 @@ pipeline {
     nodejs 'Node 8.1.4'
   }
 
-  agent none
+  agent any
 
   stages {
     stage('build') {
       agent any
       steps {
         echo "branch: ${env.BRANCH_NAME}"
+        sh '''
+          pwd
+          ls -l
+          which node
+          which npm
+          node --version
+          npm --version
+        '''
         sh 'npm install'
       }
     }
