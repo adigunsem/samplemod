@@ -1,5 +1,5 @@
 {
-  "name": "samplemod",
+  "name": "samplemodsem",
   "version": "1.0.1",
   "description": "example for npm workflow jenkins integration",
   "main": "index.js",
