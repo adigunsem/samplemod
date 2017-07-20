@@ -1,6 +1,6 @@
 pipeline {
   tools {
-    nodejs '8.1.4'
+    nodejs 'Node 8.1.4'
   }
 
   stages {
