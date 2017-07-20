@@ -7,6 +7,7 @@ pipeline {
 
   stages {
     stage('build') {
+      agent any
       steps {
         echo "branch: ${env.BRANCH_NAME}"
         sh '''
@@ -22,12 +23,14 @@ pipeline {
     }
 
     stage('test') {
+      agent any
       steps {
         sh 'npm test'
       }
     }
 
     stage('publish npm package') {
+      agent master
       when {
         branch 'master'
       }
