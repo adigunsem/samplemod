@@ -28,6 +28,8 @@ pipeline {
     }
 
     stage('deploy: prod') {
+      input 'Are you sure?'
+
       steps {
         sh '''
           export NPM_TOKEN="${NPM_TOKEN}"
