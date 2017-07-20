@@ -3,7 +3,7 @@ pipeline {
     nodejs 'Node 8.1.4'
   }
 
-  agent any
+  agent none
 
   stages {
     stage('build') {
@@ -31,7 +31,6 @@ pipeline {
       when {
         branch 'master'
       }
-      input 'Do you approve deployment?'
       steps {
         sh '''
           export NPM_TOKEN="${NPM_TOKEN}"
