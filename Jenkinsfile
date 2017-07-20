@@ -31,7 +31,7 @@ pipeline {
       steps {
         sh '''
           export NPM_TOKEN="${NPM_TOKEN}"
-          npm config set '//registry.npmjs.org/:_authToken' '$NPM_TOKEN'
+          npm config set '//registry.npmjs.org/:_authToken' '${NPM_TOKEN}'
           npm publish
            '''
       }
