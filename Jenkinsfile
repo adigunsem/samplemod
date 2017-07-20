@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        echo "branch: ${env}"
+        echo "branch: ${env.BRANCH_NAME}"
         sh '''
           pwd
           ls -l
