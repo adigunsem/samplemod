@@ -3,7 +3,7 @@ pipeline {
     nodejs 'Node 8.1.4'
   }
 
-  agent none
+  agent any
 
   stages {
     stage('build') {
@@ -32,6 +32,7 @@ pipeline {
         branch 'master'
       }
       steps {
+        input 'Are you sure?'
         sh '''
           export NPM_TOKEN="${NPM_TOKEN}"
           npm config set '//registry.npmjs.org/:_authToken' '${NPM_TOKEN}'
