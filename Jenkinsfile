@@ -28,6 +28,9 @@ pipeline {
     }
 
     stage('publish npm package') {
+      when {
+        branch 'master'
+      }
       steps {
         input 'Are you sure?'
         sh '''

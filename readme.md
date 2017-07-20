@@ -1,3 +1,8 @@
+# Jenkins Pipeline
+Documentation: https://jenkins.io/doc/book/pipeline/
+Pipeline Syntax: https://jenkins.io/doc/book/pipeline/syntax/
+Jenkins Global Variable: http://localhost:8080/pipeline-syntax/globals#env
+
 # NPM module CI Pipeline
 
 ## Reference:
