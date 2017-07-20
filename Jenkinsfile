@@ -1,11 +1,6 @@
 pipeline {
-
-  agent {
-    label 'int'
-  }
-
   tools {
-    nodejs '6.9.1'
+    nodejs '8.1.4'
   }
 
   stages {
@@ -13,7 +8,6 @@ pipeline {
       steps {
         echo "branch: ${env.BRANCH_NAME}"
         sh '''
-          figlet info
           pwd
           ls -l
           which node
