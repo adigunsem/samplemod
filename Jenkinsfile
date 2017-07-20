@@ -27,7 +27,7 @@ pipeline {
       }
     }
 
-    stage('deploy: prod') {
+    stage('publish npm package') {
       steps {
         input 'Are you sure?'
         sh '''
