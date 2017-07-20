@@ -3,6 +3,8 @@ pipeline {
     nodejs 'Node 8.1.4'
   }
 
+  agent any
+
   stages {
     stage('build') {
       steps {
