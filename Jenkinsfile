@@ -3,11 +3,11 @@ pipeline {
     nodejs 'Node 8.1.4'
   }
 
-  agent any
+  agent none
 
   stages {
     stage('build') {
-      agent any
+      agent { label 'master' }
       steps {
         echo "branch: ${env.BRANCH_NAME}"
         sh '''
@@ -23,7 +23,7 @@ pipeline {
     }
 
     stage('test') {
-      agent any
+      agent { label 'master' }
       steps {
         sh 'npm test'
       }
@@ -43,7 +43,7 @@ pipeline {
     }
 
     stage('publish npm package') {
-      agent any
+      agent { label 'master' }
       when {
         environment name: 'PUBLISH_NPM_PACKAGE', value: 'yes'
       }
