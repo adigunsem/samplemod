@@ -26,6 +26,7 @@ pipeline {
       agent any
       steps {
         sh 'npm run ci-test'
+        sh 'ls -l'
       }
     }
 
