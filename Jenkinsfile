@@ -28,6 +28,11 @@ pipeline {
         sh 'npm run ci-test'
         sh 'ls -l'
       }
+      post {
+        always {
+          junit 'test-results.xml'
+        }
+      }
     }
 
     stage('publish approval') {
@@ -60,7 +65,6 @@ pipeline {
 
   post {
     always {
-      junit('*.xml')
       cleanWs()
     }
   }
