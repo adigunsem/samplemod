@@ -8,4 +8,8 @@ describe('#index test', function () {
   it('return correctly wkwkwk', function () {
     expect(index.compute(1, 3)).to.equal(4);
   })
+
+  it('should failed', function () {
+    expect(index.compute(1, 3)).to.equal(5);
+  })
 });
