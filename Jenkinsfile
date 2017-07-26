@@ -25,7 +25,7 @@ pipeline {
     stage('test') {
       agent any
       steps {
-        sh 'npm test'
+        sh 'npm run ci-test'
       }
     }
 
@@ -59,6 +59,7 @@ pipeline {
 
   post {
     always {
+      junit('test-results.xml')
       cleanWs()
     }
   }

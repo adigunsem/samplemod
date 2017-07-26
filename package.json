@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test",
+    "ci-test": "mocha test --reporter mocha-junit-reporter",
     "preversion": "npm test"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.1.0",
-    "mocha": "^3.4.2"
+    "mocha": "^3.4.2",
+    "mocha-junit-reporter": "^1.13.0"
   }
 }
